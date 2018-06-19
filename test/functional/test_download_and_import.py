@@ -19,7 +19,6 @@ import textwrap
 import uuid
 
 import pytest
-import sagemaker
 
 from sagemaker_containers.beta.framework import errors, modules
 import test
