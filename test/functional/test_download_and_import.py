@@ -18,8 +18,8 @@ import subprocess
 import textwrap
 import uuid
 
-import sagemaker
 import pytest
+import sagemaker
 
 from sagemaker_containers.beta.framework import errors, modules
 import test
@@ -127,5 +127,3 @@ def test_import_module_from_s3_sourcedir_with_subdir(user_module_name):
     module = modules.import_module_from_s3(s3_url, user_module_name, cache=False)
 
     assert module.validate() == 'return value from function in file in subdirectory'
-
-

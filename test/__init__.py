@@ -40,6 +40,7 @@ DEFAULT_HYPERPARAMETERS = dict(sagemaker_region='us-west-2', sagemaker_job_name=
 # Should resolve to test/data, regardless of where the current working directory is.
 TEST_DATA_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data')
 
+
 def sagemaker_session(region_name=DEFAULT_REGION):  # type: (str) -> sagemaker.Session
     return sagemaker.Session(boto3.Session(region_name=region_name))
 
