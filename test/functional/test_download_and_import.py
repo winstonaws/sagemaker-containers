@@ -122,7 +122,7 @@ def test_import_module_from_s3_sourcedir_with_subdir(user_module_name):
     archive_path = os.path.join(test.TEST_DATA_DIR, 'sourcedir_with_subdirs.tar.gz')
 
     prefix = str(uuid.uuid4()).split('-')[0]
-    s3_url = sagemaker.Session().upload_data(archive_path, key_prefix=prefix)
+    s3_url = test.sagemaker_session().upload_data(archive_path, key_prefix=prefix)
 
     module = modules.import_module_from_s3(s3_url, user_module_name, cache=False)
 
